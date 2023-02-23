@@ -1,5 +1,5 @@
 function gender() {
-    alert("Checking the person M/m or F/m using If else statement")
+    alert("Checking the person M/m or F/m using If else statement");
     let nom = prompt("What's your name?");
     let gen = prompt("What's your gender? Male[M/m] || Female[F/f]");
 
