@@ -2,108 +2,108 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Personal Details</title>
- <script type="text/javascript" src="/js_task_5.js"></script>
- <style>
-  #button {
-   background-color: black;
-   color: white;
-   padding: 8px;
-   border-radius: 20px;
-   margin-left: 640px;
-   margin-top: 30px;
-  }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <script type="text/javascript" src="/js_task_5.js"></script>
+    <style>
+        #button {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            border-radius: 20px;
+            margin-left: 640px;
+            margin-top: 30px;
+        }
 
-  #for {
-   background-color: darkgrey;
+        #for {
+            background-color: darkgrey;
 
-  }
+        }
 
-  #top {
-   font-size: larger;
-   font-style: oblique;
-   text-align: center;
-   font-size: 50px;
-  }
+        #top {
+            font-size: larger;
+            font-style: oblique;
+            text-align: center;
+            font-size: 50px;
+        }
 
-  #pass {
-   margin-left: 10px;
-  }
+        #pass {
+            margin-left: 10px;
+        }
 
-  #mail {
-   margin-left: 33px;
-  }
+        #mail {
+            margin-left: 33px;
+        }
 
-  #date {
-   margin-left: 35px;
-  }
+        #date {
+            margin-left: 35px;
+        }
 
-  #pro {
-   margin-left: 1px;
-  }
+        #pro {
+            margin-left: 1px;
+        }
 
-  #mob {
-   margin-left: 15px;
-  }
+        #mob {
+            margin-left: 15px;
+        }
 
-  #tel {
-   margin-left: 17px;
-  }
+        #tel {
+            margin-left: 17px;
+        }
 
-  #add {
-   margin-left: 75px;
-  }
- </style>
+        #add {
+            margin-left: 75px;
+        }
+    </style>
 </head>
 
 <body>
- <form onsubmit="pdform()">
-  <fieldset id="for">
-   <legend id="top">PERSONAL DETAILS</legend><br>
-   <label>User Name</label>
-   <input type="text" placeholder="eg.harshan" id="uname"><br><br>
-   <label>Password</label>
-   <input type="password" placeholder="********" id="pass"><br><br>
-   <label>Email</label>
-   <input type="email" id="mail" placeholder="eg.harshan@gmail.com"><br><br>
-   <fieldset>
-    <input type="radio" name="gen" id="gen">
-    <legend>GENDER</legend>
-    <label>Male</label>
-    <input type="radio" name="gen" id="gen">
-    <label>Female</label>
-    <input type="radio" name="gen" id="gen">
-    <label>Others</label>
-   </fieldset><br>
-   <label>Address</label><br>
-   <textarea id="add" placeholder="your address here!"></textarea><br><br>
-   <input type="checkbox" id="repass">
-   <label>Remember Password</label><br><br>
-   <label>DOB</label>
-   <input type="date" id="date"><br><br>
-   <label>Profession</label>
-   <select id="pro">
-    <optgroup label="Health">
-     <option></option>
-     <option>Doctor</option>
-     <option>Physio</option>
-    </optgroup>
-    <optgroup label="IT">
-     <option>Developer</option>
-     <option>Designer</option>
-    </optgroup>
-   </select><br><br>
-   <label>Mob.No</label>
-   <input maxlength="10" id="mob" pattern="[0-9]{10}" placeholder="eg.0123456789"><br><br>
-   <label>Tele.No</label>
-   <input maxlength="10" id="tel" placeholder="eg.123-1234-123" pattern="[0-4]{3}[0-9]{4}[0-9]{3}"><br>
-  </fieldset>
-  <!-- <button type="submit" id="button">SUBMIT</button> -->
-  <input type="submit" value="register">
- </form>
+    <form onsubmit="form()" name="register">
+        <fieldset id="for">
+            <legend id="top">PERSONAL DETAILS</legend><br>
+            <label>User Name</label>
+            <input type="text" placeholder="eg.harshan" id="uname" required><br><br>
+            <label>Password</label>
+            <input type="password" placeholder="********" id="pass" required><br><br>
+            <label>Email</label>
+            <input type="email" id="mail" placeholder="eg.harshan@gmail.com" required><br><br>
+            <fieldset>
+                <input type="radio" name="gen" id="gen" value="Male" required>
+                <legend>GENDER</legend>
+                <label>Male</label>
+                <input type="radio" name="gen" id="gen" value="Female" required>
+                <label>Female</label>
+                <input type="radio" name="gen" id="gen" value="Others" required>
+                <label>Others</label>
+            </fieldset><br>
+            <label>Address</label><br>
+            <textarea id="add" placeholder="your address here!" required></textarea><br><br>
+            <input type="checkbox" id="repass" name="box" required>
+            <label>Remember Password</label><br><br>
+            <label>DOB</label>
+            <input type="date" id="date" required><br><br>
+            <label>Profession</label>
+            <select id="pro">
+                <optgroup label="Health">
+                    <option>Doctor</option>
+                    <option>Physio</option>
+                </optgroup>
+                <optgroup label="IT">
+                    <option>Developer</option>
+                    <option>Designer</option>
+                </optgroup>
+            </select><br><br>
+            <label>Mob.No</label>
+            <input maxlength="10" id="mob" pattern="[0-9]{10}" placeholder="eg.0123456789"><br><br>
+            <label>Tele.No</label>
+            <input id="tel" placeholder="eg.123-1234-123" pattern="[0-4]{3}[0-9]{4}[0-9]{3}"><br>
+        </fieldset>
+        <button type="submit" id="button" onclick="form()">SUBMIT</button>
+        <!-- <input type="submit" onclick="pdform" value="register"> -->
+    </form>
+
 </body>
 
 </html>
